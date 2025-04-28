@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo of the Stars</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  
+  <style>
+    /* Стиль для анимации загрузки */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      z-index: 1000;
+    }
+
+    /* Базовые стили */
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://images.unsplash.com/photo-1473800447596-01729482b8eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      scroll-behavior: smooth;
+      color: #f0f0f0;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Навигация */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 20, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #4af;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+    }
+
+    /* Шапка */
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 64px;
+      color: #ffffff;
+      text-shadow: 0 0 8px #4af, 0 0 16px #4af, 0 0 24px #4af;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #aaa;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #4af, 0 0 10px #4af, 0 0 20px #4af;
+      }
+      to {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+      }
+    }
+
+    /* Кнопка */
+    .start-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: linear-gradient(45deg, #4af, #0ff);
+      color: #0a0f1f;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.4s, transform 0.3s;
+    }
+
+    .start-btn:hover {
+      background: linear-gradient(45deg, #0ff, #4af);
+      transform: scale(1.05);
+    }
+
+    /* Секции */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      margin-bottom: 60px;
+    }
+
+    /* Нижний колонтитул */
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Анимация загрузки -->
+  <div class="loader">Loading...</div>
+
+  <div id="particles-js"></div>
+
+  <!-- Навигация -->
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#characters">Characters</a>
+    <a href="#trailer">Trailer</a>
+  </nav>
+
+  <!-- Шапка -->
+  <header>
+    <h1>Echo of the Stars</h1>
+    <p>When the stars began to whisper, only a few could hear...</p>
+    <a href="#story" class="start-btn">Начать путешествие</a>
+  </header>
+
+  <!-- Сюжет -->
+  <section id="story">
+    <h2>Story</h2>
+    <p>In the distant future, humanity has spread across the stars. But a strange phenomenon begins: voices coming from the stars, driving people mad. Only a few can hear them without losing their minds. Among them is Ira Nomiya, a young pilot with a forgotten past. Her journey will uncover the true nature of the voices—and herself.</p>
+  </section>
+
+  <!-- Персонажи -->
+  <section id="characters">
+    <h2>Characters</h2>
+    <p><strong>Ira Nomiya:</strong> A calm and resilient pilot, able to hear the stars without losing herself. Haunted by missing memories, Ira seeks the truth among the stars.</p>
+  </section>
+
+  <!-- Трейлер -->
+  <section id="trailer">
+    <h2>Trailer</h2>
+    <p>(Trailer coming soon)</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Echo of the Stars. All rights reserved.
+  </footer>
+
+  <!-- Настройка частиц -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 160,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "opacity": {
+          "value": 0.5
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": true,
+          "out_mode": "out",
+          "attract": {
+            "enable": true,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        }
+      }
+    });
+
+    // Убираем анимацию загрузки после загрузки сайта
+    window.addEventListener('load', () => {
+      document.querySelector('.loader').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
